@@ -19,6 +19,11 @@
  
 }
 
+#formulario input, select, option  {
+    height: 25px;
+    color: black;
+}
+
 #formulario form button{
     background-color:rgb(35, 134, 220);
     color: white;
