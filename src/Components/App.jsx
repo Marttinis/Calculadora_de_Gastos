@@ -2,6 +2,7 @@
 // import './assets/css/App.css'
 
 import Formulario from "./Formulario"
+import ListaDeGastos from "./ListaDeGastos"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Formulario />
+      <ListaDeGastos />
     </>
   )
 }
