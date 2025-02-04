@@ -12,7 +12,7 @@ function Footer() {
             <h3>Equipe:</h3>
             <p>
                 Gabriel Martins <br />
-                Alberto
+                Alberto Moiseis
             </p>
 
         </footer>
