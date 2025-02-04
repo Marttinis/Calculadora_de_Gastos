@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./Formulario.css";
 function Formulario({ setGastos }) {
   const valorInicial = {
@@ -28,6 +29,17 @@ function Formulario({ setGastos }) {
     <div id="formulario">
       <form onSubmit={cadastrar}>
         <h1>Calculadora de Gastos 🧮</h1>
+
+        <input
+          type="number"
+          name="orcamento"
+          onChange={armazenar}
+          placeholder="Qual o orçamento deste mês"
+          required
+        />
+
+
+
         <input
           type="text"
           name="nome"
@@ -36,6 +48,7 @@ function Formulario({ setGastos }) {
           placeholder="Com o que você gastou?"
           required
         />
+        
         <input
           type="number"
           name="valor"
@@ -64,7 +77,7 @@ function Formulario({ setGastos }) {
           <option value="Games">Games</option>
           <option value="Alimentação">Alimentação</option>
           <option value="Energia">Energia</option>
-          <option value="Energia">Água</option>
+          <option value="Água">Água</option>
           <option value="Outros">Outros</option>
         </select>
         <button type="submit">Cadastrar</button>

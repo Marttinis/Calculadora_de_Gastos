@@ -26,6 +26,19 @@ function Grafico({ gastos }) {
     datasets: [],
   });
 
+
+  const coresCategorias = {
+    Lazer: "rgba(255, 99, 132, 0.6)", 
+    Streaming: "rgba(54, 57, 235, 0.6)", 
+    Cursos: "rgba(255, 206, 86, 0.6)", 
+    Games: "rgba(75, 192, 192, 0.6)", 
+    Alimentação: "rgba(153, 102, 255, 0.6)",
+    Energia: "rgba(255, 159, 64, 0.6)", 
+    Água: "rgba(0, 128, 255, 0.6)",
+    Outros: "rgba(201, 203, 207, 0.6)", 
+  };
+
+
   useEffect(() => {
     const categorias = {};
     gastos.forEach((gasto) => {
@@ -42,8 +55,12 @@ function Grafico({ gastos }) {
         {
           label: "Gastos por Categoria",
           data: Object.values(categorias),
-          backgroundColor: "rgba(54, 162, 235, 0.6)", // Azul
-          borderColor: "rgba(54, 162, 235, 1)", // Borda azul
+          backgroundColor: Object.keys(categorias).map(
+            (categoria) => coresCategorias[categoria] || "rgba(0, 0, 0, 0.6)"
+          ), // Cor correspondente à categoria
+          borderColor: Object.keys(categorias).map(
+            (categoria) => coresCategorias[categoria].replace("0.6", "1")
+          ), // Borda mais opaca
           borderWidth: 1,
         },
       ],
