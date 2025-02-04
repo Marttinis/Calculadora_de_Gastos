@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./Formulario.css";
-function Formulario({ setGastos }) {
+function Formulario({ setGastos, setOrcamento }) {
   const valorInicial = {
     nome: "",
     valor: "",
@@ -10,13 +10,21 @@ function Formulario({ setGastos }) {
   };
 
   const [value, setValue] = useState(valorInicial);
+  
 
   function armazenar(ev) {
     const { name, value } = ev.target;
-    setValue((prevValue) => ({
-      ...prevValue,
-      [name]: value,
-    }));
+
+    if (name === "orcamento"){
+      setOrcamento(parseFloat(value));
+    }else{
+      setValue((prevValue) => ({
+        ...prevValue,
+        [name]: value,
+      }));
+
+    }
+    
   }
 
   function cadastrar(ev) {
@@ -34,7 +42,7 @@ function Formulario({ setGastos }) {
           type="number"
           name="orcamento"
           onChange={armazenar}
-          placeholder="Qual o orçamento deste mês"
+          placeholder="Qual o orçamento deste mês (este dado é fixo)"
           required
         />
 

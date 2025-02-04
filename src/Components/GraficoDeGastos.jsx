@@ -72,7 +72,7 @@ function Grafico({ gastos }) {
       style={{
         width: "100%",
         maxWidth: "418px",
-        height: "300px",
+        height: "330px",
         margin: "20px auto",
         padding: "10px",
         backgroundColor: "#f8f9fa",
@@ -82,7 +82,7 @@ function Grafico({ gastos }) {
       }}
     >
       <h2 style={{ textAlign: "center", fontSize: "24px" }}>
-        Gráfico de Gastos
+        Gráfico de Gastos 📊 
       </h2>
       <div style={{ width: "100%", height: "250px" }}>
         <Bar

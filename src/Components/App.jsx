@@ -5,11 +5,12 @@ import { useState } from "react";
 
 function App() {
     const [gastos, setGastos] = useState([]);
+    const [orcamento, setOrcamento] = useState(0);
 
     return (
         <>
-            <Formulario setGastos={setGastos} />
-            <ListaDeGastos gastos={gastos} />
+            <Formulario setGastos={setGastos} setOrcamento={setOrcamento} />
+            <ListaDeGastos gastos={gastos} orcamento={orcamento} />
             <GraficoDeGastos gastos={gastos} />
         </>
     );
