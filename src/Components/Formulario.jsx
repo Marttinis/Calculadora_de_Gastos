@@ -36,7 +36,7 @@ function Formulario({ setGastos, setOrcamento }) {
   return (
     <div id="formulario">
       <form onSubmit={cadastrar}>
-        <h1>Calculadora de Gastos 🧮</h1>
+        
 
         <input
           type="number"

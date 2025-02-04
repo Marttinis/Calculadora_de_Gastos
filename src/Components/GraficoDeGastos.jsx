@@ -9,6 +9,7 @@ import {
 } from "chart.js";
 import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
+import "./GraficodeGastos.css"
 
 // Registrando os componentes do Chart.js
 ChartJS.register(
@@ -68,13 +69,14 @@ function Grafico({ gastos }) {
   }, [gastos]);
 
   return (
+    <div id="divGrafico">
     <div
       style={{
         width: "100%",
         maxWidth: "418px",
         height: "330px",
         margin: "20px auto",
-        padding: "10px",
+        padding: "20px",
         backgroundColor: "#f8f9fa",
         borderRadius: "10px",
         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
@@ -99,6 +101,7 @@ function Grafico({ gastos }) {
           }}
         />
       </div>
+    </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@
   border-radius: 10px;
   margin: 20px auto;
   padding: 20px;
+  background-color: white;
 }
 
 h2{
@@ -15,4 +16,23 @@ h2{
 
 ul li{
   margin-bottom: 1rem;
+}
+
+.btn-download{
+  background-color: #222;
+  color: #ffcc00;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  border-radius: 3px;
+  align-items: center;
+  font-size: 15px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-download:hover{
+  color: white;
+  background-color: #171202;
 }

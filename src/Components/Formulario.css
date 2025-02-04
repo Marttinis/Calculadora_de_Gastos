@@ -25,8 +25,8 @@ option {
 }
 
 #formulario form button {
-  background-color: rgb(24, 165, 99);
-  color: white;
+  background-color: #222;
+  color: #ffcc00;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 150px;
@@ -39,7 +39,8 @@ option {
 }
 
 #formulario form button:hover {
-  background-color: rgb(24, 93, 154);
+  color: white;
+  background-color: #171202;
 }
 
 #botao {
