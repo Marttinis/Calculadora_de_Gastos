@@ -4,7 +4,6 @@ function Nav() {
         <div id="navbar">
             <nav>
                 <h1>Calculadora de Gastos</h1>
-                
             </nav>
         </div>
     );

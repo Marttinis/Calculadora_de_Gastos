@@ -58,10 +58,10 @@ function Grafico({ gastos }) {
           data: Object.values(categorias),
           backgroundColor: Object.keys(categorias).map(
             (categoria) => coresCategorias[categoria] || "rgba(0, 0, 0, 0.6)"
-          ), // Cor correspondente à categoria
+          ), 
           borderColor: Object.keys(categorias).map(
             (categoria) => coresCategorias[categoria].replace("0.6", "1")
-          ), // Borda mais opaca
+          ), 
           borderWidth: 1,
         },
       ],
