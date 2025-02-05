@@ -10,21 +10,18 @@ function Formulario({ setGastos, setOrcamento }) {
   };
 
   const [value, setValue] = useState(valorInicial);
-  
 
   function armazenar(ev) {
     const { name, value } = ev.target;
 
-    if (name === "orcamento"){
+    if (name === "orcamento") {
       setOrcamento(parseFloat(value));
-    }else{
+    } else {
       setValue((prevValue) => ({
         ...prevValue,
         [name]: value,
       }));
-
     }
-    
   }
 
   function cadastrar(ev) {
@@ -36,8 +33,6 @@ function Formulario({ setGastos, setOrcamento }) {
   return (
     <div id="formulario">
       <form onSubmit={cadastrar}>
-        
-
         <input
           type="number"
           name="orcamento"
@@ -45,8 +40,6 @@ function Formulario({ setGastos, setOrcamento }) {
           placeholder="Qual o orçamento deste mês (este dado é fixo)"
           required
         />
-
-
 
         <input
           type="text"
@@ -56,7 +49,7 @@ function Formulario({ setGastos, setOrcamento }) {
           placeholder="Com o que você gastou?"
           required
         />
-        
+
         <input
           type="number"
           name="valor"
